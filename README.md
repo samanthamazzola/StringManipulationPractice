@@ -43,6 +43,7 @@ namespace ConsoleApp1
             string revInput = new string(inputArray);
 
             if(userInput == revInput)
+
             {
                 Console.WriteLine($"Your input {userInput} is a palindrome. ");
             }
@@ -53,16 +54,18 @@ namespace ConsoleApp1
 
             Console.WriteLine("Would you like to try again?");
 
-            if(userInput.ToLower()=="y" || userInput.ToLower() == "yes")
+            string userAnswer = Console.ReadLine();
+
+            if(userAnswer.ToLower()=="y" || userAnswer.ToLower() == "yes")
             {
                 TryAgain();
             }
-            else if(userInput.ToLower()!="y" || userInput.ToLower() != "yes")
+            else if(userAnswer.ToLower()!="y" || userAnswer.ToLower() != "yes")
             {
                 return;
             }
-            Console.Clear();
         }
     }
 }
+
 
